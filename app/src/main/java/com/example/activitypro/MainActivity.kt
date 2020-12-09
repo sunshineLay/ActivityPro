@@ -6,13 +6,14 @@ import com.example.activitypro.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private val TEXT_VIEW_CONTENT = "textContent"
+    private val TEXT_VIEW_CONTENT
+        get() = "textContent"
+
     private lateinit var mainBinding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
-
     }
 
     //恢复
@@ -28,4 +29,5 @@ class MainActivity : AppCompatActivity() {
             putString(TEXT_VIEW_CONTENT,mainBinding.tvContent.text.toString())
         }
     }
+
 }
