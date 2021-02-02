@@ -76,7 +76,7 @@ class EasySActivity : AppCompatActivity() {
         Log.e(TAG, "onSaveInstanceState: " )
         Log.e(TAG, "onSaveInstanceState: text " +bxBinding.etName.text.toString())
     }
-
+    
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
         bxBinding.etName.setText(savedInstanceState.getString(NAME_KEY)+2)

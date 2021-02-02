@@ -1,2 +1,4 @@
+include ':activitydemo'
+include ':fragmentdemo'
 include ':app'
 rootProject.name = "ActivityPro"

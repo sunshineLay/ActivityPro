@@ -28,6 +28,21 @@ class BActivity : AppCompatActivity() {
         Log.e(TAG, "onCreate: BActivity" )
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        Log.e(TAG, "onBackPressed: "+"返回" )
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        Log.e(TAG, "onSaveInstanceState: " )
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        Log.e(TAG, "onRestoreInstanceState: " )
+    }
+
     private fun initData() {
         val intent = intent
         val stringExtra = intent.getStringExtra(AActivity.PUT_KEY)
@@ -69,4 +84,6 @@ class BActivity : AppCompatActivity() {
         super.onDestroy()
         Log.e(TAG, "onDestroy: BActivity" )
     }
+
+
 }

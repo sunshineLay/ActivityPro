@@ -29,6 +29,11 @@ class AActivity : AppCompatActivity() {
         Log.e(TAG, "onCreate: AActivity" )
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        Log.e(TAG, "onBackPressed: 返回" )
+    }
+
     private fun initOnClick() {
         intentBinding.btnJump.setOnClickListener(View.OnClickListener {
             val intent = Intent(this, BActivity::class.java)
@@ -47,6 +52,16 @@ class AActivity : AppCompatActivity() {
                 }
         }
 
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        Log.e(TAG, "onSaveInstanceState: " )
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        Log.e(TAG, "onRestoreInstanceState: " )
     }
 
     override fun onRestart() {
